@@ -37,3 +37,6 @@ node {
   stage 'deploy'
   echo 'deploy to puppet masters'
 }
+
+checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '8a7f0152-3f35-47ef-a2ff-33ed65a8764d', url: 'https://github.com/BujjiBayana/puppetdemo.git']]])
+
